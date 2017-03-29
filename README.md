@@ -1,6 +1,17 @@
+<div align="center">
+
 # Open Source Project Starter
 
 Everything a developer needs to start an Open Source project on Github.
+
+</div>
+
+<br>
+
+## Table of Contents
+
+- **[GitHub](#github)**<br>Labels, Issue Template, ...
+- **[Services](#services)**<br>Greenkeeper, Synk, ...
 
 <br>
 
