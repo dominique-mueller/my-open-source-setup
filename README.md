@@ -75,4 +75,15 @@ Snyk automatically checks every Pull Requests for dependency security vulnerabil
 To set Synk up, visit the **[Synk website](https://snyk.io/)**, connect your GitHub account, and enable Synk for one or more GitHub
 repositories.
 
-> Sync also provides a GitHub badge which can be embedded intp the `README.md` file.
+> Sync can be enabled as a requirement for Pull Request to pass. Moreover, Sync provides a GitHub badge which can be embedded into the
+`README.md` file.
+
+### GitMagic
+
+**[GitMagic](https://gitmagic.io/)** makes our repository great again - by **magically enforcing the GitHub contribution guidelines** we
+defined for our project.
+
+To set GitMagic up, visit the **[GitMagic Web App](https://app.gitmagic.io/)**, conncet your GitHub account, and enable GitMagic for one or more GitHub repository. Furthermore, a `contributing.js` file must exist in the repo - a full list of available rules is available
+**[right here](https://gitmagic.io/rules/)**
+
+> GitMagic can be enabled as a requirement for Pull Request to pass.
