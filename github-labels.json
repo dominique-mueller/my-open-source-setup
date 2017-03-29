@@ -1,0 +1,58 @@
+[
+	{
+		"name": "type: bug",
+		"color": "D9534F"
+	},
+	{
+		"name": "type: feature",
+		"color": "36A56E"
+	},
+	{
+		"name": "type: enhancement",
+		"color": "DDB04D"
+	},
+	{
+		"name": "type: support",
+		"color": "FBCA04"
+	},
+	{
+		"name": "type: documentation",
+		"color": "4276AA"
+	},
+	{
+		"name": "type: performance",
+		"color": "7F8C8D"
+	},
+	{
+		"name": "type: compatibility",
+		"color": "D499B9"
+	},
+	{
+		"name": "status: planned",
+		"color": "444444"
+	},
+	{
+		"name": "status: in progress",
+		"color": "444444"
+	},
+	{
+		"name": "status: finished",
+		"color": "444444"
+	},
+	{
+		"name": "needs repro",
+		"color": "EEEEEE"
+	},
+	{
+		"name": "discussion",
+		"color": "EEEEEE"
+	},
+	{
+		"name": "duplicate",
+		"color": "EEEEEE"
+	},
+	{
+		"name": "wontfix",
+		"color": "EEEEEE"
+	}
+]
