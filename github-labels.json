@@ -1,19 +1,19 @@
 [
 	{
 		"name": "type: bug",
-		"color": "D9534F"
+		"color": "CE4743"
 	},
 	{
 		"name": "type: feature",
-		"color": "36A56E"
+		"color": "478266"
 	},
 	{
 		"name": "type: enhancement",
-		"color": "36A56E"
+		"color": "478266"
 	},
 	{
 		"name": "type: support",
-		"color": "FBCA04"
+		"color": "20f780"
 	},
 	{
 		"name": "type: documentation",
@@ -21,23 +21,11 @@
 	},
 	{
 		"name": "type: performance",
-		"color": "7F8C8D"
+		"color": "5C7273"
 	},
 	{
 		"name": "type: compatibility",
-		"color": "D499B9"
-	},
-	{
-		"name": "status: planned",
-		"color": "444444"
-	},
-	{
-		"name": "status: in progress",
-		"color": "444444"
-	},
-	{
-		"name": "status: finished",
-		"color": "444444"
+		"color": "116b73"
 	},
 	{
 		"name": "needs repro",
