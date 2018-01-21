@@ -1,15 +1,15 @@
 [
 	{
 		"name": "type: bug",
-		"color": "CE4743"
+		"color": "AD514E"
 	},
 	{
 		"name": "type: feature",
-		"color": "478266"
+		"color": "3D8261"
 	},
 	{
-		"name": "type: enhancement",
-		"color": "478266"
+		"name": "BREAKING CHANGE",
+		"color": "444444"
 	},
 	{
 		"name": "type: support",
@@ -21,11 +21,11 @@
 	},
 	{
 		"name": "type: performance",
-		"color": "5C7273"
+		"color": "707070"
 	},
 	{
 		"name": "type: compatibility",
-		"color": "116b73"
+		"color": "A24D6C"
 	},
 	{
 		"name": "needs repro",
