@@ -14,6 +14,7 @@ My personal setup for Open Source projects on Github.
 - **[Renovate](#renovate-automated-dependency-management)**
 - **[Synk](#synk-automated-vulnarability-analysis)**
 - **[PullApprove](#pullapprove-granular-pull-request-reviews)**
+- **[Codecov](#codecov-code-coverage-as-pull-request-comment)**
 
 <br><br><br>
 
@@ -103,3 +104,37 @@ for your GitHub repositories. Once done, you can customize PullApprove by adding
 preset can be found under `presets/.pullapprove.yml`.
 
 > PullApprove can be enabled a sa requirement for Pull Requests to pass.
+
+<br><br><br>
+
+## [Codecov](https://codecov.io/): Code Coverage as Pull Request comment
+
+Codecov **writes comments into Pull Requests, presenting the current code coverage and its change regarding the default branch**. This
+enables reviewers to see the coverage quickly, without having to dive into the build logs. My custom preset can be found under
+`presets/codecov.yml`.
+
+> I've also tested **[Coveralls](https://coveralls.io/)**, but for me personally it wasn't very stable.
+
+### Setup
+
+1. Add the `codecov` package to your project's `package.json` file
+
+2. Add a code coverage upload script to your `package.json` file, for example:
+``` json
+{
+    "test:coverage": "codecov -f coverage/coverage-final.json"
+}
+```
+
+3. *Optional:* Add the `coedecov.yml` file to your project
+
+4. Add the script to your CI; in Travis CI, I usually put it in the test stage into the `after_success` block:
+
+``` yml
+jobs:
+  include:
+    - stage: test
+      after_success:
+        # Upload coverage if the tests are running green
+        - npm run test:coverage
+```
