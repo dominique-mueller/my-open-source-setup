@@ -2,7 +2,7 @@
 
 # Open Source Project Starter
 
-Everything a developer needs to start an Open Source project on Github.
+My personal setup for Open Source projects on Github.
 
 </div>
 
@@ -10,8 +10,9 @@ Everything a developer needs to start an Open Source project on Github.
 
 ## Table of Contents
 
-- **[GitHub](#github)**<br>Labels, Issue Template, ...
-- **[Services](#services)**<br>Greenkeeper, Synk, ...
+- **[GitHub](#github)**
+- **[Renovate](#renovate-automated-dependency-management)**
+- **[Synk](#synk-automated-vulnarability-analysis)**
 
 <br>
 
@@ -19,15 +20,13 @@ Everything a developer needs to start an Open Source project on Github.
 
 ### Labels
 
-In GitHub, we can assign labels to both issues and pull requests in order to signify their priority, category, or assign them with any other
-helpful information. This makes understanding and organizing open issues much easier, especially for bigger projects. This repository comes with a label preset, placed within the `github-labels.json` file. It includes labels for the type, the implementation
-state, and the issues state / issue resolution.
+In GitHub, we can assign labels to both issues and pull requests in order to signify their priority, category, or just assign any other
+useful information. This makes understanding and organizing issues much easier, especially for bigger projects. This repository comes
+with a basic label preset, placed within the `github-labels.json` file.
 
-*TODO: Screenshot*
+![GitHub Labels Preview](/docs/gihub-labels-preview.png?raw=true)
 
-> See a live example on the **[labels page of this repository](https://github.com/dominique-mueller/open-source-project-starter/labels)**.
-
-#### Upload labels into GitHub project
+**How to load labels into GitHub project:**
 
 1. Install **[GitHub Label Template](https://github.com/xavierchow/github-label-template)** globally by running:
 ``` bash
@@ -48,42 +47,38 @@ ghlbl -o <GITHUB_USER_NAME> -r <GITHUB_REPO_NAME> -t <GITHUB_TOKEN> -d
 ghlbl -o <GITHUB_USER_NAME> -r <GITHUB_REPO_NAME> -t <GITHUB_TOKEN> -i github-labels.json
 ```
 
-<br>
+> **Warning**:<br>
+> This clears all existing labels, thus also unassigning labels from all issues and pull requests! For existing projects, it's better to
+> just create / update / delete the labels manually.
 
-## Services
+<br><br><br>
 
-> Some tools below are able to open Pull Request; they will do so against your repository's default branch, which - by default - is the
-*master branch*. Especially when using Git Flow, it often makes more sense to let Pull Request go against the *develop branch* instead.
-Changing the project's default branch from the *master branch* to the *develop branch* is the solution here.
+## [Renovate](https://renovateapp.com/): Automated dependency management
 
-### Greenkeeper
+Renovate constantly **tracks our project's npm dependencies, looking for newer versions being available**. Should Renovate find a newer
+version for some dependency, it will automatically create a new branch, upgrade the dependency (while also updating the npm lock file) and
+open up a Pull Request containing all the information necessary to make an informed decision.
 
-**[Greenkeeper](https://greenkeeper.io/)** constantly **tracks our project's NPM dependencies for newer versions**. Should Greenkeeper find
-a newer version for one or more dependencies defined within our `package.json` file, it automatically creates a new branch using those newer
-dependencies. Then, Greenkeeper creates a Pull Request, containing all the information we need to make an informed decision about whether
-there is some work for us to do or not (e.g. test results via CI process).
+### Setup
 
-To set Greenkeeper up, visit the **[Greenkeeper GitHub Integration Page](https://github.com/integration/greenkeeper)**, and follow the setup
-guide to enable it for one or more GitHub repositories.
+Renovate can be setup for selective repositories using the **[Renovate GitHub app](https://github.com/apps/renovate)**. Once activated, it
+will create an initial Pull Request, introducing the `renovate.json` configuration file. My custom preset can be found under
+`presets/renovate.json`.
 
-### Synk
+> With my configuration, renovate PRs will get the `renovate` label my default. Also, it puts me in as a reviewer by default.
 
-**[Synk](https://snyk.io/)** continuously **finds and fixes security vulnerabilities in our project's NPM dependencies**. On the one hand,
-Snyk notifies us about new vulnerabilities for our project by email, and also by opening a Pull Request with the fix. On the other hand,
-Snyk automatically checks every Pull Requests for dependency security vulnerabilities.
+<br><br><br>
+
+## [Synk](https://snyk.io/): Automated vulnarability analysis
+
+Synk continuously **looks for security vulnerabilities in our project's NPM dependencies**. On the one hand, Snyk notifies us about new
+vulnerabilities found within our project by sending out an email. On the other hand, Snyk automatically checks every Pull Requests for
+dependency security vulnerabilities.
+
+### Setup
 
 To set Synk up, visit the **[Synk website](https://snyk.io/)**, connect your GitHub account, and enable Synk for one or more GitHub
 repositories.
 
 > Sync can be enabled as a requirement for Pull Request to pass. Moreover, Sync provides a GitHub badge which can be embedded into the
 `README.md` file.
-
-### GitMagic
-
-**[GitMagic](https://gitmagic.io/)** makes our repository great again - by **magically enforcing the GitHub contribution guidelines** we
-defined for our project.
-
-To set GitMagic up, visit the **[GitMagic Web App](https://app.gitmagic.io/)**, conncet your GitHub account, and enable GitMagic for one or more GitHub repository. Furthermore, a `contributing.js` file must exist in the repo - a full list of available rules is available
-**[right here](https://gitmagic.io/rules/)**
-
-> GitMagic can be enabled as a requirement for Pull Request to pass.
