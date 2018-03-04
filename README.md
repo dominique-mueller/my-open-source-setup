@@ -10,7 +10,7 @@ My personal setup for Open Source projects on Github.
 
 ## Table of Contents
 
-- **[GitHub](#github)**
+- **[GitHub Labels](#github-labels)**
 - **[Renovate](#renovate-automated-dependency-management)**
 - **[Synk](#synk-automated-vulnarability-analysis)**
 - **[PullApprove](#pullapprove-granular-pull-request-reviews)**
