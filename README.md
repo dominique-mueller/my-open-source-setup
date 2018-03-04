@@ -21,13 +21,12 @@ My personal setup for Open Source projects on Github.
 ## GitHub Labels
 
 In GitHub, we can assign labels to both issues and pull requests in order to signify their priority, category, or just assign any other
-useful information. This makes understanding and organizing issues much easier, especially for bigger projects.
-
-### Setup
-
-This repository comes with a basic label preset, placed within the `github-labels.json` file.
+useful information. This makes understanding and organizing issues much easier, especially for bigger projects. This repository comes with a
+basic label preset, placed within the `github-labels.json` file.
 
 ![GitHub Labels Preview](/docs/github-labels-preview.png?raw=true)
+
+### Setup
 
 1. Install **[GitHub Label Template](https://github.com/xavierchow/github-label-template)** globally by running:
 ``` bash
@@ -59,6 +58,8 @@ ghlbl -o <GITHUB_USER_NAME> -r <GITHUB_REPO_NAME> -t <GITHUB_TOKEN> -i ./presets
 Renovate constantly **tracks our project's npm dependencies, looking for newer versions being available**. Should Renovate find a newer
 version for some dependency, it will automatically create a new branch, upgrade the dependency (while also updating the npm lock file) and
 open up a Pull Request containing all the information necessary to make an informed decision.
+
+![Renovate Preview](/docs/renovate-preview.png?raw=true)
 
 > I've also tested **[Greenkeeper](https://greenkeeper.io/)**, but I found Renovate to be more reliable. Also, Renovate is able to correctly
 > increment version numbers, meaning it keeps the `x.x.x` syntax. Also, it works with npm lock files by default.
