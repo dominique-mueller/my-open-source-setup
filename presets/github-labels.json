@@ -8,14 +8,6 @@
 		"color": "3D8261"
 	},
 	{
-		"name": "BREAKING CHANGE",
-		"color": "444444"
-	},
-	{
-		"name": "support",
-		"color": "20f780"
-	},
-	{
 		"name": "type: documentation",
 		"color": "4276AA"
 	},
@@ -42,5 +34,17 @@
 	{
 		"name": "wontfix",
 		"color": "EEEEEE"
+	},
+	{
+		"name": "support",
+		"color": "20f780"
+	},
+	{
+		"name": "renovate",
+		"color": "c2e0c6"
+	},
+	{
+		"name": "BREAKING CHANGE",
+		"color": "444444"
 	}
 ]

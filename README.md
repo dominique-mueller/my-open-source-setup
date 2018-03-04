@@ -45,7 +45,7 @@ ghlbl -o <GITHUB_USER_NAME> -r <GITHUB_REPO_NAME> -t <GITHUB_TOKEN> -d
 
 4. Then, import the label template by running:
 ``` bash
-ghlbl -o <GITHUB_USER_NAME> -r <GITHUB_REPO_NAME> -t <GITHUB_TOKEN> -i github-labels.json
+ghlbl -o <GITHUB_USER_NAME> -r <GITHUB_REPO_NAME> -t <GITHUB_TOKEN> -i ./presets/github-labels.json
 ```
 
 > **Warning**:<br>
