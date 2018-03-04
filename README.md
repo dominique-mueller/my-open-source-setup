@@ -138,3 +138,13 @@ jobs:
         # Upload coverage if the tests are running green
         - npm run test:coverage
 ```
+
+<br><br><br>
+
+## Creator
+
+**Dominique Müller**
+
+- E-Mail: **[dominique.m.mueller@gmail.com](mailto:dominique.m.mueller@gmail.com)**
+- Website: **[www.devdom.io](https://www.devdom.io/)**
+- Twitter: **[@itsdevdom](https://twitter.com/itsdevdom)**
