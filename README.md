@@ -13,8 +13,9 @@ My personal setup for Open Source projects on Github.
 - **[GitHub](#github)**
 - **[Renovate](#renovate-automated-dependency-management)**
 - **[Synk](#synk-automated-vulnarability-analysis)**
+- **[PullApprove](#pullapprove-granular-pull-request-reviews)**
 
-<br>
+<br><br><br>
 
 ## GitHub Labels
 
@@ -58,6 +59,9 @@ Renovate constantly **tracks our project's npm dependencies, looking for newer v
 version for some dependency, it will automatically create a new branch, upgrade the dependency (while also updating the npm lock file) and
 open up a Pull Request containing all the information necessary to make an informed decision.
 
+> I've also tested **[Greenkeeper](https://greenkeeper.io/)**, but I found Renovate to be more reliable. Also, Renovate is able to correctly
+> increment version numbers, meaning it keeps the `x.x.x` syntax. Also, it works with npm lock files by default.
+
 ### Setup
 
 Renovate can be setup for selective repositories using the **[Renovate GitHub app](https://github.com/apps/renovate)**. Once activated, it
@@ -79,5 +83,23 @@ dependency security vulnerabilities.
 To set Synk up, visit the **[Synk website](https://snyk.io/)**, connect your GitHub account, and enable Synk for one or more GitHub
 repositories.
 
-> Sync can be enabled as a requirement for Pull Request to pass. Moreover, Sync provides a GitHub badge which can be embedded into the
+> Sync can be enabled as a requirement for Pull Requests to pass. Moreover, Sync provides a GitHub badge which can be embedded into the
 `README.md` file.
+
+<br><br><br>
+
+## [PullApprove](https://about.pullapprove.com/): Granular Pull Request reviews
+
+Using PullApprove allows us to **define Pull Request conditions and reviewers in a more granular way**. This includes the ability to setup
+reviewer groups, or declare custom conditions for pending and rejection states.
+
+> If one just wants to handle Work in Progress Pull Requests, the **[WIP GitHub App](https://github.com/apps/wip)** is a well working
+> alternative.
+
+### Setup
+
+To setup PullApprove, visit the **[PullApprove website](https://pullapprove.com/)**, connect your GitHub account, and enable PullApprove
+for your GitHub repositories. Once done, you can customize PullApprove by adding a `.pullapprove.yml` file to your repository. My custom
+preset can be found under `presets/.pullapprove.yml`.
+
+> PullApprove can be enabled a sa requirement for Pull Requests to pass.
