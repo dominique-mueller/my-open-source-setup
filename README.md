@@ -16,17 +16,16 @@ My personal setup for Open Source projects on Github.
 
 <br>
 
-## GitHub
-
-### Labels
+## GitHub Labels
 
 In GitHub, we can assign labels to both issues and pull requests in order to signify their priority, category, or just assign any other
-useful information. This makes understanding and organizing issues much easier, especially for bigger projects. This repository comes
-with a basic label preset, placed within the `github-labels.json` file.
+useful information. This makes understanding and organizing issues much easier, especially for bigger projects.
 
-![GitHub Labels Preview](/docs/gihub-labels-preview.png?raw=true)
+### Setup
 
-**How to load labels into GitHub project:**
+This repository comes with a basic label preset, placed within the `github-labels.json` file.
+
+![GitHub Labels Preview](/docs/github-labels-preview.png?raw=true)
 
 1. Install **[GitHub Label Template](https://github.com/xavierchow/github-label-template)** globally by running:
 ``` bash
