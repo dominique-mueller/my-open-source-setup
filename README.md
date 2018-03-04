@@ -122,7 +122,7 @@ enables reviewers to see the coverage quickly, without having to dive into the b
 2. Add a code coverage upload script to your `package.json` file, for example:
 ``` json
 {
-    "test:coverage": "codecov -f coverage/coverage-final.json"
+  "test:coverage": "codecov -f coverage/coverage-final.json"
 }
 ```
 
@@ -135,7 +135,6 @@ jobs:
   include:
     - stage: test
       after_success:
-        # Upload coverage if the tests are running green
         - npm run test:coverage
 ```
 
