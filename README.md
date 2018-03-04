@@ -114,6 +114,8 @@ Codecov **writes comments into Pull Requests, presenting the current code covera
 enables reviewers to see the coverage quickly, without having to dive into the build logs. My custom preset can be found under
 `presets/codecov.yml`.
 
+![Codecov Preview](/docs/codecov-preview.png?raw=true)
+
 > I've also tested **[Coveralls](https://coveralls.io/)**, but for me personally it wasn't very stable.
 
 ### Setup
