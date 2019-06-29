@@ -28,6 +28,11 @@ basic label preset, placed within the `github-labels.json` file.
 
 ### Setup
 
+The following describes how to quickly setup my personal list of labels.
+
+> **WARNING**:<br>This process clears all existing labels, thus also unassigning labels from all issues and pull requests! For existing
+> projects, it's better to just create / update / delete the labels manually.
+
 1. Install **[GitHub Label Template](https://github.com/xavierchow/github-label-template)** globally by running:
 ``` bash
 npm install -g github-label-template
@@ -46,10 +51,6 @@ ghlbl -o <GITHUB_USER_NAME> -r <GITHUB_REPO_NAME> -t <GITHUB_TOKEN> -d
 ``` bash
 ghlbl -o <GITHUB_USER_NAME> -r <GITHUB_REPO_NAME> -t <GITHUB_TOKEN> -i ./presets/github-labels.json
 ```
-
-> **Warning**:<br>
-> This clears all existing labels, thus also unassigning labels from all issues and pull requests! For existing projects, it's better to
-> just create / update / delete the labels manually.
 
 <br><br><br>
 
