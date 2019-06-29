@@ -1,50 +1,62 @@
 [
 	{
-		"name": "type: bug",
-		"color": "AD514E"
+		"color": "444444",
+		"description": "Indicates a breaking change",
+		"name": "BREAKING CHANGE"
 	},
 	{
-		"name": "type: feature",
-		"color": "3D8261"
+		"color": "EEEEEE",
+		"description": "Indicates that this issue / PR needs to be discussed in detail before further steps can be taken",
+		"name": "discussion"
 	},
 	{
-		"name": "type: documentation",
-		"color": "4276AA"
+		"color": "EEEEEE",
+		"description": "Indicates that a similar / identical issue already exists",
+		"name": "duplicate"
 	},
 	{
-		"name": "type: performance",
-		"color": "707070"
+		"color": "EEEEEE",
+		"description": "Indicates that this issue needs a reproduction before further steps can be taken",
+		"name": "needs repro"
 	},
 	{
-		"name": "type: compatibility",
-		"color": "A24D6C"
+		"color": "c2e0c6",
+		"description": "Indicates an automated dependency update by renovate",
+		"name": "renovate"
 	},
 	{
-		"name": "needs repro",
-		"color": "EEEEEE"
+		"color": "20f780",
+		"description": "Indicates a request for help / clarification",
+		"name": "support"
 	},
 	{
-		"name": "discussion",
-		"color": "EEEEEE"
+		"color": "AD514E",
+		"description": "Indicates an unintended behaviour, unexpected problem, crash",
+		"name": "type: bug"
 	},
 	{
-		"name": "duplicate",
-		"color": "EEEEEE"
+		"color": "A24D6C",
+		"description": "Indicates an issue that only occurs on specific browsers / operating systems / devices",
+		"name": "type: compatibility"
 	},
 	{
-		"name": "wontfix",
-		"color": "EEEEEE"
+		"color": "4276AA",
+		"description": "Indicates wrong, unclear, missing or hard to understand documentation",
+		"name": "type: documentation"
 	},
 	{
-		"name": "support",
-		"color": "20f780"
+		"color": "3D8261",
+		"description": "Indicates a feature or enhancement",
+		"name": "type: feature"
 	},
 	{
-		"name": "renovate",
-		"color": "c2e0c6"
+		"color": "707070",
+		"description": "Indicates slow performance or crashes",
+		"name": "type: performance"
 	},
 	{
-		"name": "BREAKING CHANGE",
-		"color": "444444"
+		"color": "EEEEEE",
+		"description": "Indicates that work won't continue based on a previous decision / discussion",
+		"name": "wontfix"
 	}
 ]
