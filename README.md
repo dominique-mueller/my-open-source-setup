@@ -91,24 +91,6 @@ repositories.
 
 <br><br><br>
 
-## [PullApprove](https://about.pullapprove.com/): Granular Pull Request reviews
-
-Using PullApprove allows us to **define Pull Request conditions and reviewers in a more granular way**. This includes the ability to setup
-reviewer groups, or declare custom conditions for pending and rejection states.
-
-> If one just wants to handle Work in Progress Pull Requests, the **[WIP GitHub App](https://github.com/apps/wip)** is a well working
-> alternative.
-
-### Setup
-
-To setup PullApprove, visit the **[PullApprove website](https://pullapprove.com/)**, connect your GitHub account, and enable PullApprove
-for your GitHub repositories. Once done, you can customize PullApprove by adding a `.pullapprove.yml` file to your repository. My custom
-preset can be found under `presets/.pullapprove.yml`.
-
-> PullApprove can be enabled a sa requirement for Pull Requests to pass.
-
-<br><br><br>
-
 ## [Codecov](https://codecov.io/): Code Coverage as Pull Request comment
 
 Codecov **writes comments into Pull Requests, presenting the current code coverage and its change regarding the default branch**. This
