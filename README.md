@@ -11,8 +11,6 @@ My personal setup for Open Source projects on Github.
 ## Table of Contents
 
 - **[GitHub Labels](#github-labels)**<br>Setup all GitHub labels automatically
-- **[Renovate](#renovate-automated-dependency-management)**<br>Automatic dependency version management
-- **[Synk](#synk-automated-vulnarability-analysis)**<br>Automatic dependency security management
 - **[Codecov](#codecov-code-coverage-as-pull-request-comment)**<br>Code Coverage service integration (CI)
 
 <br><br><br>
