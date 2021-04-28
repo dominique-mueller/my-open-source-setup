@@ -6,14 +6,7 @@ My personal setup for Open Source projects on Github.
 
 </div>
 
-<br>
-
-## Table of Contents
-
-- **[GitHub Labels](#github-labels)**<br>Setup all GitHub labels automatically
-- **[Codecov](#codecov-code-coverage-as-pull-request-comment)**<br>Code Coverage service integration (CI)
-
-<br><br><br>
+<br><br>
 
 ## GitHub Labels
 
@@ -54,36 +47,47 @@ ghlbl -o <GITHUB_USER_NAME> -r <GITHUB_REPO_NAME> -t <GITHUB_TOKEN> -i ./presets
 
 <br><br><br>
 
-## [Codecov](https://codecov.io/): Code Coverage as Pull Request comment
+## [Codecov](https://codecov.io/)
 
-Codecov **writes comments into Pull Requests, presenting the current code coverage and its change regarding the default branch**. This
-enables reviewers to see the coverage quickly, without having to dive into the build logs. My custom preset can be found under
-`presets/codecov.yml`.
+Codecov allows us to track code coverage over time, and it also comes with a bot that writes comments into Pull Requests presenting the
+current code coverage and its change compared to the default branch.
 
 ![Codecov Preview](/docs/codecov-preview.png?raw=true)
 
-> I've also tested **[Coveralls](https://coveralls.io/)**, but for me personally it wasn't very stable.
+> I've also tested **[Coveralls](https://coveralls.io/)**, but it wasn't very stable in my experience.
 
 ### Setup
 
-1. Add the `codecov` package to your project's `package.json` file
-
-2. Add a code coverage upload script to your `package.json` file, for example:
+1. Add the **[codecov](https://www.npmjs.com/package/codecov)** to the `devDependencies` of your project's `package.json` file. For example:
 
 ```json
 {
-  "test:coverage": "codecov -f coverage/coverage-final.json"
+  "devDependencies": {
+    "codecov": "x.x.x"
+  }
 }
 ```
 
-3. _Optional:_ Add the `coedecov.yml` file to your project
+2. Add a code coverage upload script to your `package.json` file. For example:
 
-4. Add the script to your CI; in Travis CI, I usually put it in the test stage into the `after_success` block:
+```json
+{
+  "test:upload-coverage": "codecov -f coverage/coverage-final.json"
+}
+```
+
+3. Add a `codecov.yml` configuration file to your project with your preferred configuration.
+
+> My custom configuration can be found at `presets/codecov.yml`.
+
+4. Run the script to your CI, after your tests have finished successfully. In GitHub actions, for example:
 
 ```yml
 jobs:
-  include:
-    - stage: test
-      after_success:
-        - npm run test:coverage
+  test:
+    name: Test
+    steps:
+      # Other steps ...
+      - name: Upload test coverage
+        run: npm run test:upload-coverage
 ```
